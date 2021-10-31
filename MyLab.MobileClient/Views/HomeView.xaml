@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MyLab.MobileClient.Views.HomeView">
+<CarouselView x:Name="cView" ItemsSource="{Binding MyFiles}">
+  <CarouselView.ItemTemplate>
+      <DataTemplate>
+              <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="250" CornerRadius="20" VerticalOptions="CenterAndExpand">
+          <StackLayout>
+              <Label Text="{Binding FileName}" />
+              <Label Text="{Binding LastModifiedDate}" />
+          </StackLayout>
+              </Frame>
+      </DataTemplate>
+  </CarouselView.ItemTemplate>
+</CarouselView>
+    <!--<ListView ItemsSource="{Binding MyFiles}">
+
+
+    </ListView>-->
+</ContentPage>
