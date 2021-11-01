@@ -24,7 +24,7 @@ namespace MyLab.MobileClient.Views
             {
                 await _viewModel.Init();
             }
-            var test = _viewModel.MyFiles;
+            
             //cView.SetBinding(ItemsView<Cell>.ItemsSourceProperty, new Binding("."));
             //cView.BindingContext = _viewModel.MyFiles;
         }
