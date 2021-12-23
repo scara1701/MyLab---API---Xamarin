@@ -20,8 +20,9 @@ namespace MyLab.MobileClient.Services
         {
             //string baseAddress =
             //DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:25026/file" : "http://localhost:25026/file";
-            string baseAddress = "https://demofiles.gwendemulder.be/file";
-        List<MyFile> files = new List<MyFile>();
+            //string baseAddress = "https://demofiles.gwendemulder.be/file";
+            string baseAddress = "http://demofiles.gwendemulder.be/file";
+            List<MyFile> files = new List<MyFile>();
 
         Uri uri = new Uri(string.Format(baseAddress, string.Empty));
             HttpResponseMessage response = await httpClient.GetAsync(uri);

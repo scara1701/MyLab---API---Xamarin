@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using System.Net;
 
 namespace MyLab.MobileClient.Droid
 {
@@ -12,6 +13,13 @@ namespace MyLab.MobileClient.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            #if DEBUG
+            // You may use ServicePointManager here
+            ServicePointManager
+                .ServerCertificateValidationCallback +=
+                (sender, cert, chain, sslPolicyErrors) => true;
+            #endif
+
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
